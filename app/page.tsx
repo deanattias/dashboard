@@ -1,9 +1,14 @@
-import AcmeLogo from "@/app/ui/acme-logo";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
-import styles from "@/app/ui/home.module.css";
-import { lusitana } from "./ui/fonts";
-import Image from "next/image";
+import AcmeLogo from '@/app/ui/acme-logo';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
+import styles from '@/app/ui/home.module.css';
+import { lusitana } from './ui/fonts';
+import Image from 'next/image';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Acme Dashboard',
+};
 
 export default function Page() {
   return (
@@ -17,7 +22,7 @@ export default function Page() {
           <p
             className={`${lusitana.className} text-xl text-gray-800 md:text-3xl md:leading-normal`}
           >
-            <strong>Welcome to Acme.</strong> This is the example for the{" "}
+            <strong>Welcome to Acme.</strong> This is the example for the{' '}
             <a href="https://nextjs.org/learn/" className="text-blue-500">
               Next.js Learn Course
             </a>
@@ -37,14 +42,14 @@ export default function Page() {
             width={1000}
             height={760}
             className="hidden md:block"
-            alt={"Screenshots of the dashboard project showing desktop version"}
+            alt={'Screenshots of the dashboard project showing desktop version'}
           />
           <Image
             src="/hero-mobile.png"
             width={560}
             height={620}
             className="block md:hidden"
-            alt={"Screenshots of the dashboard project showing desktop version"}
+            alt={'Screenshots of the dashboard project showing desktop version'}
           />
         </div>
       </div>
